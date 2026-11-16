@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #123c2f;
+  --color-secondary: #246b50;
+  --color-cream: #f8f6ef;
+  --color-gold: #c6a66b;
+  --color-ink: #252b27;
+  --color-line: #e4dfd2;
+  --font-sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f6ef;
+  color: #252b27;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+#root {
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a,
+select,
+summary {
+  cursor: pointer;
+}
+
+::selection {
+  background: #123c2f;
+  color: #f8f6ef;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+#home {
+  scroll-margin-top: 0;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #252b27;
+  box-shadow: 0 0 0 1000px #ffffff inset;
+  transition: background-color 9999s ease-out;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  background: #ffffff;
+  color: #123c2f;
+  padding: 0.6rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
